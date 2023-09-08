@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="siddharth";
+        let n=str.length;
+        let remove=5;
+        var str2=[];
+        var str3="";
+        document.write("<strong>Entered String :</strong> "+str);
+        document.write("<br> <strong>Position to be removed :</strong>"+remove);
+        if(remove>0&&remove<n){
+            for(let k=0;k<remove-1;k++){
+                str2[k]=str[k];
+                
+            }
+            for(let i=remove-1;i<n;i++){
+                temp=str[i];
+                str2[i]=str[i+1];
+                str2[i+1]=temp;
+            }
+            for(let j=0;j<n-1;j++){
+                str3=str3.concat(str2[j]);
+            }
+            document.write("<br> <strong>Resulting New String :</strong>"+str3); 
+        }else{
+            document.write("<strong>The entered postion is not in the limits</strong>")
+        }
+    </script>
+</body>
+</html>
